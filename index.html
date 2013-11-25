@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wpapp-doc by dodyrw</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/dodyrw/wpapp-doc">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/dodyrw/wpapp-doc/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/dodyrw/wpapp-doc/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Wpapp-doc</h1>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/dodyrw">dodyrw</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="wpapp-31" class="anchor" href="#wpapp-31"><span class="octicon octicon-link"></span></a>WpApp 3.1</h1>
+
+<p>WpApp is a Titanium template that enable you to create an iOS app for WordPress blog. In addition you will also receive the android version as bonus. </p>
+
+<p>If you are not familiar with the Titanium platform then refer to the <a href="http://wiki.appcelerator.org/display/guides/Getting+Started+with+Titanium">Getting Started</a> with Titanium guide.</p>
+
+<p>In order to fetch blog post data, WpApp require a WpApp WordPress plugin to be installed. The plugin is provided in this package in <code>/wpplugin</code> folder.</p>
+
+<h2>
+<a name="whats-new" class="anchor" href="#whats-new"><span class="octicon octicon-link"></span></a>What's New</h2>
+
+<ul>
+<li>Updated to iOS 7 behaviour:
+
+<ul>
+<li>Set title bar color</li>
+<li>Set navigation bar tint color</li>
+<li>Set tab bar tint color</li>
+</ul>
+</li>
+<li>Bug fixes:
+
+<ul>
+<li>Post title not truncated on 4" device</li>
+<li>Load indicator in detail screen visible on top left screen</li>
+</ul>
+</li>
+</ul><h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Build universal app, iPad ready</li>
+<li>APNS script to send push notification</li>
+<li>Customize Admob banner size, iPad only</li>
+<li>Push notification for each time new post published </li>
+<li>More social sites: twitter improved, youtube, facebook and flickr </li>
+<li>Twitter posts </li>
+<li>Pages List </li>
+<li>Admob module</li>
+<li>Database cache</li>
+<li>i18n localization</li>
+<li>Unlimited categories</li>
+<li>Pull to refresh</li>
+<li>Share by email and facebook</li>
+<li>Loading indicator</li>
+<li>20 color skins</li>
+<li>Reset data</li>
+<li>Automatically finding image from blog post</li>
+<li>WordPress plugin</li>
+<li>Easy to customize</li>
+</ul><h2>
+<a name="user-interfaces" class="anchor" href="#user-interfaces"><span class="octicon octicon-link"></span></a>User Interfaces</h2>
+
+<p>Titanium will run app.js by default. It will load configuration (<code>config.js</code>), skin (<code>skin/</code>), libraries (<code>lib/</code>) and user interface (<code>ui/</code>) files.</p>
+
+<p>Recent News (recent.js)
+recentpost.png</p>
+
+<p>Category Dashboard (categ.js)
+categorydashboard.png</p>
+
+<p>Category Posts (list.js)
+categorypost.png</p>
+
+<p>Detail Blog Post (post.js)
+detailpost.png</p>
+
+<p>Pages (page.js)
+pages.png</p>
+
+<p>More
+more.png</p>
+
+<p>Facebook
+facebook.png</p>
+
+<p>Youtube
+youtube.png</p>
+
+<p>Flickr
+flickr.png</p>
+
+<p>Push Notification
+push.png</p>
+
+<h2>
+<a name="wpapp-wordpress-plugin-installation" class="anchor" href="#wpapp-wordpress-plugin-installation"><span class="octicon octicon-link"></span></a>WpApp WordPress plugin installation</h2>
+
+<p>WpApp contains a WordPress plugin that must be installed in your blog. This plugin serve as data provider for our apps. To install it, upload wpapp.zip (under folder wpplugin in this package) with WordPress admin panel, just like to install any other WordPress plugins.</p>
+
+<p>After the plugin activated, there will be a new admin menu called WPAPP under Settings menu. In this page, you need to set the API KEY that will provide a secure way to access WordPress data.</p>
+
+<p>The next two options are required to enable push notification with Urban Airship. Please read the following blog post to setup push notification.</p>
+
+<p>Enable APN and generate .p12 file.
+Setup Urban Airship
+Tips: You may want to use hash generator tool like MD5 has generator to generate more secure string combination.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
