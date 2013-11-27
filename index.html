@@ -1,54 +1,460 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Wpapp-doc by dodyrw</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+  <meta charset=utf-8">
+  <title>WpApp 3</title>
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/dodyrw/wpapp-doc">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/dodyrw/wpapp-doc/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/dodyrw/wpapp-doc/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+	<meta charset="utf-8">
+	<meta name="format" content="complete">
+  <style type="text/css">
+html {
+    /* the line height value of 1.9 is fixed for a line height multiple of 1.4 in the text view */
+    font: normal 106.2%/1.9 serif;
+}
 
-    <div class="wrapper">
+body {
+    font-family: 'Avenir Next', Helvetica, Georgia, serif;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    overflow:hidden;
+    background-color: #f2f2f2;
+    color: #3c3c3c;
+}
 
-      <section>
-        <div id="title">
-          <h1>Wpapp-doc</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/dodyrw">dodyrw</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+/**
+ *
+    Wrappers
+ *
+ */
 
-        <h1>
-<a name="wpapp-31" class="anchor" href="#wpapp-31"><span class="octicon octicon-link"></span></a>WpApp 3.1</h1>
+#wrapper {
+    position: fixed;
+    width: 99.9%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 1.0em;
+}
 
-<p>WpApp is a Titanium template that enable you to create an iOS app for WordPress blog. In addition you will also receive the android version as bonus. </p>
+#wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    -webkit-transition: all .45s ease-in;
+    position: relative;
+}
+#wrapper::-webkit-scrollbar-button:start:decrement, #wrapper::-webkit-scrollbar-button:end:increment {
+    height: 0px;
+    display: block;
+    background-color: transparent;
+}
+#wrapper::-webkit-scrollbar-track-piece {
+    background-color:
+    transparent;
+    -webkit-border-radius: 6px;
+}
+#wrapper::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #c8c8c8;
+    -webkit-border-radius: 6px;
+    -webkit-transition: all .45s ease-in;
+}
+
+#content {
+    width: 610px;
+    margin: 0 auto 0 auto;
+    padding: 30px 0 30px 0;
+}
+
+/**
+ *
+    Headings
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+h1, 
+h2, 
+h3 { margin-bottom: 1rem; }
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.00rem; }
+h6 { font-size: 0.85rem; }
+
+/**
+ *
+	Paragraphs
+ *
+ */
+
+p {
+	margin: 0 0 1.5em;
+}
+
+/**
+ *
+    Block quotes
+ *
+ */
+
+blockquote {
+    margin: 0 0 1.5em;
+    width: 96%;
+    padding: 0 10px;
+    border-left: 3px solid #ddd;
+    color: #777;
+}
+
+/**
+ *
+	Code Blocks
+ *
+ */
+
+pre code {
+	word-wrap: normal;
+	white-space: pre-wrap;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    -webkit-border-radius: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+    width: 96%;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 3px 10px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+code {
+	white-space: nowrap;
+	font-family: monospace;
+    padding: 2px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+small {
+	font-size: 65%;
+}
+
+/**
+ *
+    Dictionary Definition
+ *
+ */
+
+dt {
+	display: inline;
+    font-weight:bold;
+}
+
+dd {
+	display: block;
+}
+
+/**
+ *
+    Anchors
+ *
+ */
+
+a {
+    color: #308bd8;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+ *
+    Horizontal rules
+ *
+ */
+
+hr {
+    width: 100%;
+    margin: 3em auto;
+    border: 0;
+    color: #eee;
+    background-color: #ccc;
+    height: 1px;
+    -webkit-box-shadow:0px 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+/**
+ *
+    Lists
+ *
+ */
+
+ol, ul {
+    list-style-position: outside;
+    padding-left: 0;
+    margin-left: 1.5em;
+}
+
+ol li, ul li {
+    text-align: -webkit-match-parent;
+}
+
+li p {
+    margin: 0.5em 0 0.5em;
+}
+
+ol ol, ol ul, ul ul, ul ol {
+    padding-left: 1.5em;
+}
+
+/**
+ *
+    Tables
+ *
+ */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-spacing: 0;
+}
+
+table th {
+    padding: 3px 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+table tr {
+}
+
+table td {
+    padding: 3px 10px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+/**
+ *
+    Images
+ *
+ */
+
+img {
+    border: none;
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
+
+/**
+ *
+    Marks
+ *
+ */
+
+mark {
+    background: #fefec0;
+    padding:1px 3px;
+}
+
+/**
+ *
+    Footnotes
+ *
+ */
+.footnote {
+    font-size: 0.8rem;
+    vertical-align: super;
+}
+.footnotes ol {
+    font-weight: bold;
+}
+.footnotes ol li {
+    text-align: -webkit-match-parent;
+}
+
+.footnotes ol li p {
+    font-weight: normal;
+}
+
+/**
+ *
+    Figures and Captions
+ *
+ */
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+figure {
+    display: block;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/**
+ *
+    Custom classes
+ *
+ */
+
+.shadow {
+    -webkit-box-shadow: 0 2px 4px #999;
+}
+
+.source {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin: -40px auto;
+}
+#wrapper {
+    width: 99.9%;
+}
+#content {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile support */
+@media only screen and (max-device-width:1024px) {
+    html {
+        overflow: auto;
+    }
+
+    #wrapper {
+        overflow: auto;
+        position: relative;
+    }
+}@media print {
+/* Printing support.
+ * Override all printing colors to match the Light theme.
+ */
+img, pre, blockquote, table, figure {
+    page-break-inside: avoid;
+}
+body {
+    background-color:#fff;
+}
+#wrapper {
+    position: static;
+    overflow: hidden;
+    color: #000;
+    width: 100%;
+    margin: 0 auto;
+}
+.footnotes {
+    page-break-before: always;
+}
+#content {
+    margin: 0 auto;
+    padding: 0;
+    width: 98%;
+}
+#top-fader, #bottom-fader {
+    display: none;
+}
+hr {
+    color:#ddd;
+    background-color:#ddd;
+    -webkit-box-shadow:0px 1px 0px #ddd;
+}
+pre {
+    background-color:transparent;
+    border: 1px solid #ddd;
+}
+code {
+    background-color:transparent;
+    border: 1px solid #ddd;
+}
+blockquote {
+    border-left: 3px solid #ddd;
+    color: #000;
+}
+ol {
+    /*
+     * Override the list style when printing to ensure list
+     * markers won't get cut.
+     */
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+table {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+table th {
+    background-color:transparent;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+table td {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+mark {
+    background:transparent;
+    color: #000;
+}
+.source {
+    color: #000;
+}
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="content">
+<h1>WpApp: iPhone app for WordPress</h1>
+
+<p>by Dody Rachmat Wicaksono<br>
+Website: <a href="http://www.dody.co">http://www.dody.co</a><br>
+Email: info (at) dody.co<br>
+Date: Nov 27, 2013
+<hr>
+WpApp is a Titanium template that enable you to create an iOS app for WordPress blog. In addition you will also receive the android version as bonus. </p>
 
 <p>If you are not familiar with the Titanium platform then refer to the <a href="http://wiki.appcelerator.org/display/guides/Getting+Started+with+Titanium">Getting Started</a> with Titanium guide.</p>
 
 <p>In order to fetch blog post data, WpApp require a WpApp WordPress plugin to be installed. The plugin is provided in this package in <code>/wpplugin</code> folder.</p>
 
-<h2>
-<a name="whats-new" class="anchor" href="#whats-new"><span class="octicon octicon-link"></span></a>What's New</h2>
+<h2>What&#8217;s New in 3.1</h2>
 
 <ul>
 <li>Updated to iOS 7 behaviour:
@@ -57,26 +463,25 @@
 <li>Set title bar color</li>
 <li>Set navigation bar tint color</li>
 <li>Set tab bar tint color</li>
-</ul>
-</li>
+</ul></li>
 <li>Bug fixes:
 
 <ul>
-<li>Post title not truncated on 4" device</li>
+<li>Post title not truncated on 4&quot; device</li>
 <li>Load indicator in detail screen visible on top left screen</li>
+</ul></li>
 </ul>
-</li>
-</ul><h2>
-<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<h2>Features</h2>
 
 <ul>
 <li>Build universal app, iPad ready</li>
 <li>APNS script to send push notification</li>
 <li>Customize Admob banner size, iPad only</li>
-<li>Push notification for each time new post published </li>
-<li>More social sites: twitter improved, youtube, facebook and flickr </li>
-<li>Twitter posts </li>
-<li>Pages List </li>
+<li>Push notification for each time new post published</li>
+<li>More social sites: twitter improved, youtube, facebook and flickr</li>
+<li>Twitter posts</li>
+<li>Pages List</li>
 <li>Admob module</li>
 <li>Database cache</li>
 <li>i18n localization</li>
@@ -89,43 +494,36 @@
 <li>Automatically finding image from blog post</li>
 <li>WordPress plugin</li>
 <li>Easy to customize</li>
-</ul><h2>
-<a name="user-interfaces" class="anchor" href="#user-interfaces"><span class="octicon octicon-link"></span></a>User Interfaces</h2>
+</ul>
+
+<h2>User Interfaces</h2>
 
 <p>Titanium will run app.js by default. It will load configuration (<code>config.js</code>), skin (<code>skin/</code>), libraries (<code>lib/</code>) and user interface (<code>ui/</code>) files.</p>
 
-<p>Recent News (recent.js)
-<img src="http://dodyrw.github.io/wpapp-doc/recentpost.png" alt="Recent Post"></p>
+<table>
+<tr>
+<td>Recent News (recent.js)<img src="http://dodyrw.github.io/wpapp-doc/images2/recentpost.png" style="width: 200px;"/></td>
+<td>Category Dashboard (categ.js)<img src="http://dodyrw.github.io/wpapp-doc/images2/categorydashboard.png" style="width: 200px;"/></td>
+</tr>
+<tr>
+<td>Category Posts (list.js)<img src="http://dodyrw.github.io/wpapp-doc/images2/categorypost.png" style="width: 200px;"/></td>
+<td>Detail Blog Post (post.js)<img src="http://dodyrw.github.io/wpapp-doc/images2/detailpost.png" style="width: 200px;"/></td>
+</tr>
+<tr>
+<td>Pages (page.js)<img src="http://dodyrw.github.io/wpapp-doc/images2/pages.png" style="width: 200px;"/></td>
+<td>More<img src="http://dodyrw.github.io/wpapp-doc/images2/more.png" style="width: 200px;"/></td>
+</tr>
+<tr>
+<td>Facebook<img src="http://dodyrw.github.io/wpapp-doc/images2/facebook.png" style="width: 200px;"/></td>
+<td>Youtube<img src="http://dodyrw.github.io/wpapp-doc/images2/youtube.png" style="width: 200px;"/></td>
+</tr>
+<tr>
+<td>Flickr<img src="http://dodyrw.github.io/wpapp-doc/images2/flickr.png" style="width: 200px;"/></td>
+<td>Push Notification<img src="http://dodyrw.github.io/wpapp-doc/images2/push.png" style="width: 200px;"/></td>
+</tr>
+</table>
 
-<p>Category Dashboard (categ.js)
-<a href="http://dodyrw.github.io/wpapp-doc/categorydashboard.png">http://dodyrw.github.io/wpapp-doc/categorydashboard.png</a></p>
-
-<p>Category Posts (list.js)
-<a href="http://dodyrw.github.io/wpapp-doc/categorypost.png">http://dodyrw.github.io/wpapp-doc/categorypost.png</a></p>
-
-<p>Detail Blog Post (post.js)
-<a href="http://dodyrw.github.io/wpapp-doc/detailpost.png">http://dodyrw.github.io/wpapp-doc/detailpost.png</a></p>
-
-<p>Pages (page.js)
-<a href="http://dodyrw.github.io/wpapp-doc/pages.png">http://dodyrw.github.io/wpapp-doc/pages.png</a></p>
-
-<p>More
-<a href="http://dodyrw.github.io/wpapp-doc/more.png">http://dodyrw.github.io/wpapp-doc/more.png</a></p>
-
-<p>Facebook
-<a href="http://dodyrw.github.io/wpapp-doc/facebook.png">http://dodyrw.github.io/wpapp-doc/facebook.png</a></p>
-
-<p>Youtube
-<a href="http://dodyrw.github.io/wpapp-doc/youtube.png">http://dodyrw.github.io/wpapp-doc/youtube.png</a></p>
-
-<p>Flickr
-<a href="http://dodyrw.github.io/wpapp-doc/flickr.png">http://dodyrw.github.io/wpapp-doc/flickr.png</a></p>
-
-<p>Push Notification
-<a href="http://dodyrw.github.io/wpapp-doc/push.png">http://dodyrw.github.io/wpapp-doc/push.png</a></p>
-
-<h2>
-<a name="wpapp-wordpress-plugin-installation" class="anchor" href="#wpapp-wordpress-plugin-installation"><span class="octicon octicon-link"></span></a>WpApp WordPress plugin installation</h2>
+<h2>WpApp WordPress plugin installation</h2>
 
 <p>WpApp contains a WordPress plugin that must be installed in your blog. This plugin serve as data provider for our apps. To install it, upload wpapp.zip (under folder wpplugin in this package) with WordPress admin panel, just like to install any other WordPress plugins.</p>
 
@@ -133,13 +531,304 @@
 
 <p>The next two options are required to enable push notification with Urban Airship. Please read the following blog post to setup push notification.</p>
 
-<p>Enable APN and generate .p12 file.
-Setup Urban Airship
-Tips: You may want to use hash generator tool like MD5 has generator to generate more secure string combination.</p>
-      </section>
+<ul>
+<li><a href="http://www.dodyrw.com/how-to-generate-pkcs12-file-for-apple-push-notification/">Enable APN and generate .p12 file</a></li>
+<li><a href="http://www.dodyrw.com/how-to-setup-apple-push-notification-with-urban-airship/">Setup Urban Airship</a></li>
+</ul>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+<p><strong>Tips:</strong> You may want to use hash generator tool like MD5 has generator to generate more secure string combination.</p>
+
+<p><img src="http://dodyrw.github.io/wpapp-doc/images2/wpplugin.png" style="width: 500px;"/></p>
+
+<h2>Setup and customization</h2>
+
+<ol>
+<li>Create a new Titanium project.</li>
+<li>Edit <code>config.php</code>.</li>
+</ol>
+
+<pre>
+var config = {
+
+  /**************** app setting ****************/
+
+  // wordpress url
+  "BLOG_URL"            : "http://www.domain.tld/wordpress/",
+
+  // webmaster email
+  "WEBMASTER_EMAIL"     : "webmaster@domain.tld",
+
+  // json data feed option
+  "JSON_POST_COUNT"     : "20",
+  "JSON_API_KEY"        : "123456",
+
+  // twitter
+  "TWITTER_ACCOUNT"     : "envatowebdev",
+  "FACEBOOK_URL"        : 'http://m.facebook.com/pages/nicecoder/117973358230454',
+  "YOUTUBE_URL"         : 'http://m.youtube.com/profile?user=dodyrwzzz',
+  "FLICKR_URL"          : 'http://m.flickr.com/photos/58709576@N08',
+
+
+  /**************** optional ****************/
+
+  // admob
+  "ADMOB_PUBLISHER_ID"  : "xxxxxxxxxxxx",
+  "ADMOB_BGCOLOR"       : "#fff",
+  "ADMOB_GENDER"        : "",
+  "ADMOB_KEYWORD"       : "",
+  "ADMOB_TESTING"       : "true",  // true or false
+
+  // urban airship (push notification service)
+  "URBAN_AIRSHIP_APP_KEY"       : 'xxxxxxxxxxxx',
+  "URBAN_AIRSHIP_MASTER_SECRET" : 'xxxxxxxxxxxx',
+
+  "FIX_IMG_POST"        : "1",
+  "FORCE_RELOAD_TIME"   : "1800 seconds", // do not refresh automatically during this time
+
+  // blog post tableview
+  "DEFAULT_IMAGE"       : "imgs/default.png",
+
+  // pages tableview
+  "DEFAULT_PAGES_IMAGE"  : 'imgs/pages/light_doc.png',
+
+  // use only one skin, put comment on the other selections
+  // "SKIN"                : "blue", 
+  // "SKIN"                : "red", 
+  // "SKIN"                : "cloud", 
+  "SKIN"                : "brown", 
+  // "SKIN"                : "magen", 
+  // "SKIN"                : "orange", 
+  // "SKIN"                : "silver", 
+  // "SKIN"                : "green", 
+  // "SKIN"                : "silvercloud", 
+  // "SKIN"                : "blueblue", 
+  // "SKIN"                : "black", 
+  // "SKIN"                : "redlight", 
+  // "SKIN"                : "bluedark", 
+  // "SKIN"                : "magencyan", 
+  // "SKIN"                : "redblack", 
+  // "SKIN"                : "greenlight", 
+  // "SKIN"                : "orenjiblack", 
+  // "SKIN"                : "brownlight", 
+  // "SKIN"                : "bluenext", 
+  // "SKIN"                : "blacklight", 
+
+  "DB_NAME"             : "WpAppDB"
+};
+</pre>
+
+<ol>
+<li>Edit <code>categ_list.js</code>. Here you set the categories. You can add as many as you need. They will be appear in category dashboard.</li>
+</ol>
+
+<pre>
+var categ_list = {
+    "categs": [
+        {
+            "slug"    : "apartemen-akomodasi",
+            "label"   : "Apartments",
+            "icon_off": "imgs/categ/a_off.png", // 72x90
+            "icon_on" : "imgs/categ/a_on.png"
+        },
+        {
+            "slug"    : "hotel-akomodasi",
+            "label"   : "Hotels",
+            "icon_off": "imgs/categ/h_off.png",
+            "icon_on" : "imgs/categ/h_on.png"
+        }
+    ]
+};
+</pre>
+
+<p>Where to get the category slug? Go to WordPress admin panel &gt; Posts &gt; Categories. Or navigate to:</p>
+
+<pre>http://[domain.tld]/wp-admin/edit-tags.php?taxonomy=category</pre>
+
+<p><img src="http://dodyrw.github.io/wpapp-doc/images2/slug_categ.png" style="width: 500px;"/></p>
+
+<ol>
+<li>Edit <code>pages_list.js</code>. In this file you can set the list of WordPress pages. There is no limit for the number of pages. You can add as many as you need.</li>
+</ol>
+
+<pre>
+var pages_list = {
+    "pages": [
+        {
+            "slug"    : "sample-page",
+            "label"   : "Sample page",
+            "image"   : "imgs/pages/light_flag.png",  
+        },
+        {
+            "slug"    : "testing-a-page",
+            "label"   : "Sample page 2 ada image"
+        },
+    ]
+};
+</pre>
+
+<p>To get the pages slug, <code>WordPress admin panel &gt; Pages &gt; All pages</code>. Then click <code>quick edit</code> on the page item. </p>
+
+<p><img src="http://dodyrw.github.io/wpapp-doc/images2/slug_pages.png" style="width: 500px;"/></p>
+
+<h2>Customizing skins</h2>
+
+<p>Skin files are under <code>skin/</code> folder. The code structure is quite easy and self-explained. To make tableview with gradient color, you need to set <code>skin.RECENT_TV_GRADIENT</code> and <code>skin.CATEG_TV_GRADIENT</code> in the bottom section. Otherwise, if you want to use plain color, make sure to comment them.</p>
+
+<pre>
+var skin = {
+
+    // recent news title bar color and image
+    // if use image, bar color and title should empty
+    // if use text title, bar image should empty
+    "RECENT_BAR_IMAGE"     : "",        // example: imgs/wpapp.png, size: 320x45
+    "RECENT_BAR_COLOR"     : "#9f0007", // example: #ff840a
+
+    // category title bar color and image
+    // if use image, bar color and title should empty
+    // if use text title, bar image should empty
+    "CATEG_BAR_IMAGE"     : "",        // example: imgs/wpapp.png, size: 320x45
+    "CATEG_BAR_COLOR"     : "#9f0007", // example: #ff840a
+    "CATEG_DASHBOARD_BGCOLOR" : "#333",
+
+    // blog post title bar color and image
+    // if use image, bar color should empty
+    // if use text title, bar image should empty
+    "POST_BAR_IMAGE"      : "",        // example: imgs/wpapp.png, size: 320x45
+    "POST_BAR_COLOR"      : "#9f0007", // example: #ff840a
+
+    // about tab bar color and image
+    // if use image, bar color and title should empty
+    // if use text title, bar image should empty
+    "ABOUT_BAR_IMAGE"     : "",        // example: imgs/wpapp.png, size: 320x45
+    "ABOUT_BAR_COLOR"     : "#9f0007", // example: #ff840a
+
+    "WEBVIEW_BAR_IMAGE"   : "",        // example: imgs/wpapp.png, size: 320x45
+    "WEBVIEW_BAR_COLOR"   : "#9f0007", // example: #ff840a
+
+    "TWITTER_BAR_IMAGE"   : "",        // example: imgs/wpapp.png, size: 320x45
+    "TWITTER_BAR_COLOR"   : "#9f0007", // example: #ff840a
     
-  </body>
+    "PAGES_BAR_IMAGE"     : "",        // example: imgs/wpapp.png, size: 320x45
+    "PAGES_BAR_COLOR"     : "#9f0007", // example: #ff840a
+
+    // table view for recent news
+    "RECENT_TV_BGCOLOR"    : "",   
+    "RECENT_TV_BGCOLOR_ALT": "",   
+    "RECENT_TV_SEPARATOR_COLOR": "#000",   
+    "RECENT_TV_TITLE_COLOR": "#fff",   
+    "RECENT_TV_META_COLOR" : "#fff",  
+
+    // table view for categories
+    "CATEG_TV_BGCOLOR"    : "",   
+    "CATEG_TV_BGCOLOR_ALT": "",   
+    "CATEG_TV_SEPARATOR_COLOR": "#000",   
+    "CATEG_TV_TITLE_COLOR": "#fff",   
+    "CATEG_TV_META_COLOR" : "#fff",  
+    
+    // table view for twitter 
+    "TWITTER_TV_BGCOLOR"    : "",   
+    "TWITTER_TV_BGCOLOR_ALT": "",   
+    "TWITTER_TV_SEPARATOR_COLOR": "#000",   
+    "TWITTER_TV_TITLE_COLOR": "#fff",   
+    "TWITTER_TV_META_COLOR" : "#fff", 
+    
+    // table view for pages 
+    "PAGES_TV_BGCOLOR"    : "#404040",   
+    "PAGES_TV_BGCOLOR_ALT": "#272727",   
+    "PAGES_TV_TITLE_COLOR": "#fff",  
+
+    "DUMMY" : ""   
+};
+
+skin.RECENT_TV_GRADIENT = {
+  type:'linear',
+  colors:[ {color:'#404040',position:0.0},{color:'#2f2f2f',position:0.5},{color:'#272727',position:1.0} ]
+};
+
+skin.CATEG_TV_GRADIENT = {
+  type:'linear',
+  colors:[ {color:'#404040',position:0.0},{color:'#2f2f2f',position:0.5},{color:'#272727',position:1.0} ]
+};
+
+skin.TWITTER_TV_GRADIENT = {
+  type:'linear',
+  colors:[ {color:'#404040',position:0.0},{color:'#2f2f2f',position:0.5},{color:'#272727',position:1.0} ]
+};
+</pre>
+
+<p><a href="skin.html">Click here to see available pre-made skins</a></p>
+
+<h2>i18n localization</h2>
+
+<p>WpApp strings are stored in <code>/i18n/[language_code]/strings.xml</code>. You can easily change the strings in this file. If you want to make translation, create a new folder under i18n with the name is language code. For an example, I have put Indonesian translation with folder name <code>id</code>.</p>
+
+<p>Code structure:</p>
+
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;resources&gt;
+&lt;string name=&quot;wpapp_recent&quot;&gt;Recent News&lt;/string&gt;
+&lt;string name=&quot;wpapp_categories&quot;&gt;Categories&lt;/string&gt;
+&lt;string name=&quot;wpapp_pages&quot;&gt;Pages&lt;/string&gt;
+&lt;string name=&quot;wpapp_twitter&quot;&gt;Twitter&lt;/string&gt;
+&lt;string name=&quot;wpapp_about&quot;&gt;About&lt;/string&gt;
+&lt;string name=&quot;recent_news&quot;&gt;Recent News&lt;/string&gt;
+&lt;string name=&quot;categ_categories&quot;&gt;Categories&lt;/string&gt;
+&lt;string name=&quot;about&quot;&gt;About&lt;/string&gt;
+&lt;string name=&quot;about_reset_data&quot;&gt;Reset Data&lt;/string&gt;
+&lt;string name=&quot;about_alert&quot;&gt;Do you want to reset data?&lt;/string&gt;
+&lt;string name=&quot;about_yes&quot;&gt;Yes&lt;/string&gt;
+&lt;string name=&quot;about_no&quot;&gt;No&lt;/string&gt;
+&lt;string name=&quot;about_contact_webmaster&quot;&gt;Contact Webmaster&lt;/string&gt;
+&lt;string name=&quot;about_tell_a_friend&quot;&gt;Tell a Friend&lt;/string&gt;
+&lt;string name=&quot;about_visit_website&quot;&gt;Visit Website&lt;/string&gt;
+&lt;string name=&quot;about_terms_and_conditions&quot;&gt;Terms &amp; Conditions&lt;/string&gt;
+&lt;string name=&quot;about_privacy_policy&quot;&gt;Privacy Policy&lt;/string&gt;
+&lt;string name=&quot;share&quot;&gt;Share&lt;/string&gt;
+&lt;string name=&quot;share_this_on&quot;&gt;Share this on...&lt;/string&gt;
+&lt;string name=&quot;share_email&quot;&gt;Email&lt;/string&gt;
+&lt;string name=&quot;share_cancel&quot;&gt;Cancel&lt;/string&gt;
+&lt;string name=&quot;post_source&quot;&gt;Source&lt;/string&gt;
+&lt;string name=&quot;indicator_loading&quot;&gt;Loading...&lt;/string&gt;
+&lt;string name=&quot;ptr_pull_to_reload&quot;&gt;Pull to reload&lt;/string&gt;
+&lt;string name=&quot;ptr_last_updated&quot;&gt;Last Updated: &lt;/string&gt;
+&lt;string name=&quot;ptr_pull_down_to_refresh&quot;&gt;Pull down to refresh...&lt;/string&gt;
+&lt;string name=&quot;ptr_release_to_refresh&quot;&gt;Release to refresh...&lt;/string&gt;
+&lt;string name=&quot;ptr_reloading&quot;&gt;Reloading...&lt;/string&gt;
+&lt;string name=&quot;webmaster_subject&quot;&gt;Iphone app feedback&lt;/string&gt;
+&lt;string name=&quot;webmaster_body&quot;&gt;&lt;/string&gt;
+&lt;string name=&quot;tell_friend_subject&quot;&gt;Interesting iphone app&lt;/string&gt;
+&lt;string name=&quot;tell_friend_body&quot;&gt;I'd like to share an interesting iphone app.&lt;/string&gt;
+&lt;string name=&quot;twitter&quot;&gt;Twitter Posts&lt;/string&gt;
+&lt;string name=&quot;pages&quot;&gt;Pages&lt;/string&gt;
+&lt;string name=&quot;pages_available&quot;&gt;Available Pages&lt;/string&gt;
+&lt;string name=&quot;youtube&quot;&gt;Youtube&lt;/string&gt;
+&lt;string name=&quot;facebook&quot;&gt;Facebook&lt;/string&gt;
+&lt;string name=&quot;flickr&quot;&gt;Flickr&lt;/string&gt;
+&lt;/resources&gt;
+</pre>
+
+<p><strong>In order to use this feature, you must do deployment with Titanium Studio. Deployment with XCODE will not render the correct strings.</strong></p>
+
+<h2>Useful links</h2>
+
+<ul>
+<li><a href="http://developer.appcelerator.com/questions/newest">Titanium Community Questions &amp; Answers</a></li>
+<li><a href="https://wiki.appcelerator.org/display/guides/Titanium+Compatibility+Matrix#TitaniumCompatibilityMatrix-iOS">Titanium Compatibility Matrix</a></li>
+</ul>
+
+<h2>Sources and credits</h2>
+
+<p>I&#8217;ve used the following icons and photos.</p>
+
+<ul>
+<li>Icons from <a href="http://developer.appcelerator.com/blog/2010/12/festivus-celebration-day-two-airing-of-grievances.html">Appcelerator Icon Package</a> (Apache 2.0 license for developers)</li>
+<li>Icons from <a href="http://glyphish.com/">glyphish.com</a> (Free version)</li>
+<li>Photos from <a href="http://photos8.org/">Photos8</a></li>
+</ul>
+
+<p>Once again, thank you so much for purchasing WpApp. As I said at the beginning, I&#8217;d be glad to help you if you have any questions relating to this template. No guarantees, but I&#8217;ll do my best to assist. If you have a more general question relating to the template on CodeCanyon, you might consider visiting the forums and asking your question in the &#8220;Item Discussion&#8221; section.</p>
+    </div>
+  </div> <!-- End wrapper -->
+</body>
 </html>
